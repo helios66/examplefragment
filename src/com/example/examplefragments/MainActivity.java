@@ -1,10 +1,7 @@
 package com.example.examplefragments;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
@@ -25,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 			.add(R.id.container, new TestFragment()).commit();
-			state = 1;
+			//state = 1;
 		}
 
 //		switchFragment.setOnClickListener(new View.OnClickListener() {

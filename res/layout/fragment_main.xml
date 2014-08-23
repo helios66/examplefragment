@@ -3,23 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin"
+    android:background="@color/white"
     android:orientation="vertical"
      >
 
-    <EditText 
-        android:id="@+id/message"
+    <ListView 
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:inputType="text"
-        android:hint="@string/hintMessage"
-        />
-    
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/getMessage"
-        android:text="@string/okButton"
-        />
+        android:layout_height="match_parent"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="2dp"
+        >
+        
+    </ListView>
         
 
 </LinearLayout>
