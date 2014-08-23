@@ -8,5 +8,7 @@
 	<string name="okButton">OK Button.</string>
 	<string name="notOk">Not OK Button.</string>
 	<string name="hintMessage">Enter a message here.</string>
+	<string name="showAlertDialog">Show Alert Dialog</string>
+	<string name="showProgressDialog">Show Progress Dialog</string>
     
 </resources>

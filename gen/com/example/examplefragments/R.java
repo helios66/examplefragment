@@ -995,7 +995,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f05002f;
         public static final int action_mode_bar_stub=0x7f05002e;
         public static final int action_mode_close_button=0x7f050022;
-        public static final int action_settings=0x7f050047;
+        public static final int action_settings=0x7f050048;
         public static final int activity_chooser_view_content=0x7f050023;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1017,12 +1017,11 @@ containing a value of this type.
         public static final int image=0x7f050025;
         public static final int left_icon=0x7f050031;
         public static final int listMode=0x7f050001;
-        public static final int listView=0x7f050043;
         public static final int list_item=0x7f050027;
         public static final int middle=0x7f050012;
-        public static final int movieDesc=0x7f050046;
-        public static final int movieImage=0x7f050044;
-        public static final int movieTitle=0x7f050045;
+        public static final int movieDesc=0x7f050047;
+        public static final int movieImage=0x7f050045;
+        public static final int movieTitle=0x7f050046;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
@@ -1042,8 +1041,10 @@ containing a value of this type.
         public static final int search_src_text=0x7f05003d;
         public static final int search_voice_btn=0x7f050041;
         public static final int shortcut=0x7f05002c;
+        public static final int showAlertDialog=0x7f050043;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
+        public static final int showProgressDialog=0x7f050044;
         public static final int showTitle=0x7f050006;
         public static final int split_action_bar=0x7f05001c;
         public static final int submit_area=0x7f05003f;
@@ -1162,6 +1163,8 @@ containing a value of this type.
         public static final int hintMessage=0x7f0a0013;
         public static final int notOk=0x7f0a0012;
         public static final int okButton=0x7f0a0011;
+        public static final int showAlertDialog=0x7f0a0014;
+        public static final int showProgressDialog=0x7f0a0015;
     }
     public static final class style {
         /** 
