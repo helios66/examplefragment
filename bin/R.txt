@@ -239,11 +239,10 @@ int id action_menu_presenter 0x7f050017
 int id action_mode_bar 0x7f05002f
 int id action_mode_bar_stub 0x7f05002e
 int id action_mode_close_button 0x7f050022
-int id action_settings 0x7f050044
+int id action_settings 0x7f050045
 int id activity_chooser_view_content 0x7f050023
 int id always 0x7f05000b
 int id beginning 0x7f050011
-int id changeFragment 0x7f050043
 int id checkbox 0x7f05002b
 int id collapseActionView 0x7f05000d
 int id container 0x7f050042
@@ -255,6 +254,7 @@ int id edit_query 0x7f050036
 int id end 0x7f050013
 int id expand_activities_button 0x7f050024
 int id expanded_menu 0x7f05002a
+int id getMessage 0x7f050044
 int id home 0x7f050014
 int id homeAsUp 0x7f050005
 int id icon 0x7f050028
@@ -263,6 +263,7 @@ int id image 0x7f050025
 int id left_icon 0x7f050031
 int id listMode 0x7f050001
 int id list_item 0x7f050027
+int id message 0x7f050043
 int id middle 0x7f050012
 int id never 0x7f050009
 int id none 0x7f050010
@@ -342,6 +343,9 @@ int string action_settings 0x7f0a000f
 int string app_name 0x7f0a000d
 int string fragmain 0x7f0a0010
 int string fragnew 0x7f0a000e
+int string hintMessage 0x7f0a0013
+int string notOk 0x7f0a0012
+int string okButton 0x7f0a0011
 int style AppBaseTheme 0x7f0b007f
 int style AppTheme 0x7f0b0080
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0061
