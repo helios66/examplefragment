@@ -2,8 +2,11 @@
 package com.example.examplefragments;
 
 
+import android.app.ProgressDialog;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,11 +42,14 @@ public class TestFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				String value = firstText.getText().toString();
-				SharedPreferences spref = getActivity().getSharedPreferences(PREF_NAME, 0);
-				SharedPreferences.Editor editor = spref.edit();
-				editor.putString("TEXT", value);
-				editor.commit();
+//				String value = firstText.getText().toString();
+//				SharedPreferences spref = getActivity().getSharedPreferences(PREF_NAME, 0);
+//				SharedPreferences.Editor editor = spref.edit();
+//				editor.putString("TEXT", value);
+//				editor.commit();
+				
+				new AsyncTaskClass().execute();
+				
 			}
 		});
 
@@ -62,6 +68,42 @@ public class TestFragment extends Fragment {
 	}
 
 
+	private class AsyncTaskClass extends AsyncTask<String, Void, Void>{
+		
+		private ProgressDialog pdialog;
+		
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+			pdialog = new ProgressDialog(getActivity());
+			pdialog.setMessage("This is an AsyncTask");
+			pdialog.show();
+			
+		}
+
+		@Override
+		protected Void doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			try{
+				Thread.sleep(5000);
+			}catch(Exception n){
+				n.printStackTrace();
+			}
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			pdialog.dismiss();
+			
+		}
+		
+		
+	}
+	
 	
 
 }
