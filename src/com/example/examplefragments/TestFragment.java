@@ -1,16 +1,15 @@
 
 package com.example.examplefragments;
 
-import java.util.ArrayList;
 
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 /**
@@ -21,7 +20,7 @@ import android.widget.Button;
 
 public class TestFragment extends Fragment {
 
-	Button showAlertDialog, showProgressDialog;
+	final String PREF_NAME = "SAVEALL"; 
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,31 +28,33 @@ public class TestFragment extends Fragment {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-		final Button showAlertDialog = (Button)view.findViewById(R.id.showAlertDialog);
-		final Button showProgressDialog = (Button)view.findViewById(R.id.showProgressDialog);
+		final Button saveString = (Button)view.findViewById(R.id.saveString);
+		final Button getString = (Button)view.findViewById(R.id.getString);
 		
-		showAlertDialog.setOnClickListener(new View.OnClickListener() {
+		final EditText firstText = (EditText)view.findViewById(R.id.firstText);
+		final EditText secondText = (EditText)view.findViewById(R.id.secondText);
+		
+		saveString.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				final AlertDialog.Builder alertDiag = new AlertDialog.Builder(getActivity());
-				alertDiag.setMessage("This is an alert dialog.");
-				alertDiag.setNeutralButton("Cancel", null);
-				alertDiag.create().show();
+				String value = firstText.getText().toString();
+				SharedPreferences spref = getActivity().getSharedPreferences(PREF_NAME, 0);
+				SharedPreferences.Editor editor = spref.edit();
+				editor.putString("TEXT", value);
+				editor.commit();
 			}
 		});
 
-		showProgressDialog.setOnClickListener(new View.OnClickListener() {
+		getString.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				final ProgressDialog pDiag = new ProgressDialog(getActivity());
-				pDiag.setMessage("This is a progress dialog");
-				pDiag.setCancelable(true);
-				pDiag.setCanceledOnTouchOutside(true);
-				pDiag.show();
+				SharedPreferences spref = getActivity().getSharedPreferences(PREF_NAME, 0);
+				String value = spref.getString("TEXT", "This is a default value");
+				secondText.setText(value);
 			}
 		});
 		

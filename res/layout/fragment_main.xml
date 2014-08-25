@@ -8,19 +8,33 @@
     android:gravity="center_vertical"
      >
 
+    
+    <EditText 
+        android:id="@+id/firstText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        />
 
     <Button 
-        android:id="@+id/showAlertDialog"
+        android:id="@+id/saveString"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/showAlertDialog"
         />
     
     <Button 
-        android:id="@+id/showProgressDialog"
+        android:id="@+id/getString"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/showProgressDialog"
+        />
+    
+    <EditText 
+        android:id="@+id/secondText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
         />
 
 </LinearLayout>
